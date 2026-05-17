@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AMC Agreement — Centrix Plus &amp; Frontline Express</title>
+<style>
+  /* ===== Print page setup ===== */
+  @page {
+    size: A4;
+    margin: 22mm 28mm 22mm 28mm;   /* top right bottom left — more breathing room L/R */
+  }
+
+  /* ===== Screen + print shared ===== */
+  body {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #1a1a1a;
+    line-height: 1.5;
+    max-width: 780px;
+    margin: 30px auto;
+    padding: 0 60px;               /* generous L/R gutter on screen */
+  }
+  h1 { font-size: 17pt; text-align: center; margin-bottom: 4px; }
+  h2 {
+    font-size: 12.5pt;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  h3 {
+    font-size: 11pt;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    orphans: 3;
+    widows: 3;
+  }
+  .subtitle { text-align: center; margin-top: 0; font-size: 11pt; color: #555; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 8px 0 12px 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  td, th {
+    border: 1px solid #888;
+    padding: 5px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f0f0f0; }
+  ol, ul {
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+  li {
+    margin-bottom: 3px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep heading + its first paragraph/table together */
+  h2 + p, h2 + table, h2 + ol, h2 + ul,
+  h3 + p, h3 + table, h3 + ol, h3 + ul {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  /* Signature block — never split */
+  .sig {
+    margin-top: 30px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .sig td { border: none; padding: 4px 8px; }
+  .sig .label { width: 50%; }
+
+  /* Force major section onto a new page if it would otherwise dangle */
+  .page-break { page-break-before: always; break-before: page; }
+
+  .clause-num { font-weight: bold; }
+
+  /* ===== Print-only refinements ===== */
+  @media print {
+    body {
+      margin: 0;
+      padding: 0;            /* @page margins handle the L/R gutter on print */
+      max-width: none;
+      font-size: 10.5pt;
+    }
+    h1 { margin-top: 0; }
+    a { color: #1a1a1a; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>ANNUAL MAINTENANCE CONTRACT (AMC)</h1>
+<p class="subtitle">Software Support &amp; Maintenance Agreement</p>
+
+<table>
+<tr><th style="width: 25%;">Effective Date</th><td><b>01 May 2026</b></td></tr>
+<tr><th>Term</th><td><b>01 May 2026 to 30 April 2027</b> (One year), renewable annually by mutual agreement</td></tr>
+<tr><th>Annual AMC Fee</th><td>KD 1,000 (Kuwaiti Dinar One Thousand only) per annum, exclusive of taxes</td></tr>
+<tr><th>Provider</th><td><b>Centrix Plus</b> (hereinafter "the Vendor")</td></tr>
+<tr><th>Customer</th><td><b>Frontline Express</b> (hereinafter "the Customer")</td></tr>
+</table>
+
+<h2>Preamble</h2>
+<p>The deployed solution has been operational at the Customer's premises since <b>23 April 2025</b>, with the Vendor providing technical support throughout that period at no additional charge. This Agreement formalises the ongoing maintenance and support arrangement on a structured contractual basis with effect from the Effective Date stated above.</p>
+
+<h2>1. Scope of Solution Covered Under This AMC</h2>
+<p>The Vendor has implemented a two-part integrated solution at the Customer's premises, comprising the following components, all of which are covered under this AMC:</p>
+
+<h3>1.1 Call Centre Solution</h3>
+<p>A proprietary call-centre / contact-centre platform owned and developed by Centrix Plus. The Customer is granted a license to use this software at the agreed location and user scale. The underlying intellectual property, source code, and all derivative rights to the Call Centre Solution remain the exclusive property of <b>Centrix Plus</b>.</p>
+
+<h3>1.2 CRM &amp; Mobile Application</h3>
+<p>A customer relationship management (CRM) system and accompanying mobile application, designed and developed <b>exclusively for Frontline Express</b>. Centrix Plus undertakes that this custom-built CRM and Mobile Application <b>shall not be licensed, sold, sub-licensed, or otherwise transferred to any third party</b> during or after the term of this Agreement. Centrix Plus retains the underlying source code and technology rights; the Customer holds an exclusive, perpetual right of use for the deployed instance.</p>
+
+<h2>2. AMC Coverage — What Is Included</h2>
+<ol>
+<li><b>Software maintenance</b> of the current production build of the Call Centre Solution, CRM, and Mobile Application as deployed on the Effective Date.</li>
+<li><b>Bug fixes and error resolution</b> for any defects or malfunctions arising from the existing functionality during the AMC period.</li>
+<li><b>Priority support</b> for incidents reported by the Customer, with response targets as defined in Section 4 below.</li>
+<li><b>Remote technical support</b> for system issues, database recovery from existing backups, configuration assistance, and troubleshooting.</li>
+<li><b>Minor configuration changes</b> within the scope of existing functionality (e.g. campaign tweaks, user setup, role permissions).</li>
+<li><b>Annual license renewal notification</b> sent in writing to the Customer at least <b>30 days prior</b> to any expiry of Vendor-supplied software components.</li>
+<li><b>Up to two (2) on-site visits per AMC year</b> within Kuwait at no additional charge; additional on-site visits will be billed at the Vendor's then-prevailing rate.</li>
+</ol>
+
+<h2>3. Exclusions — What Is NOT Covered</h2>
+<p>The following are explicitly outside the scope of this AMC and shall be subject to a separate written scope and quotation if requested:</p>
+<ul>
+<li>New feature development, new modules, custom reports, integrations with new third-party systems, or any enhancement beyond the existing functionality of the deployed build.</li>
+<li>Server hardware, operating system, network infrastructure, internet connectivity, and any data-centre or hosting-related issues.</li>
+<li>SSL certificate procurement, renewal, and installation. The Customer retains responsibility for SSL ownership and renewal; the Vendor will only provide reminder notifications. SSL installation work, if requested outside the AMC, will be quoted separately (and provided free of charge during an active AMC year as a goodwill inclusion).</li>
+<li>Third-party software, services, licenses or APIs not supplied by the Vendor (telco carrier services, payment gateways, SMS gateways, etc.).</li>
+<li>Issues caused by Customer-side changes, unauthorised modifications, or third-party intervention to the deployed system.</li>
+<li>Data entry, content migration, or operational tasks that fall under the Customer's day-to-day business operations.</li>
+<li>Training of new users beyond the initial handover training (refresher / new-batch training quoted separately).</li>
+<li>Force majeure events (natural disasters, telecom outages, power failures, etc.).</li>
+</ul>
+
+<h2>4. Service Levels &amp; Response Times</h2>
+<table>
+<tr><th>Severity</th><th>Definition</th><th>Response</th><th>Targeted Resolution</th></tr>
+<tr>
+  <td><b>P1 — Critical</b></td>
+  <td>Production system fully down; no calls/CRM/mobile usable</td>
+  <td>Within <b>2 working hours</b></td>
+  <td>Within 1 working day, where feasible</td>
+</tr>
+<tr>
+  <td><b>P2 — High</b></td>
+  <td>Major function impacted but workaround possible</td>
+  <td>Within <b>4 working hours</b></td>
+  <td>Within 3 working days</td>
+</tr>
+<tr>
+  <td><b>P3 — Medium</b></td>
+  <td>Minor function affected; system largely usable</td>
+  <td>Within <b>1 working day</b></td>
+  <td>Best effort, typically within 5–10 working days</td>
+</tr>
+<tr>
+  <td><b>P4 — Low</b></td>
+  <td>Cosmetic, configuration, or query</td>
+  <td>Within <b>2 working days</b></td>
+  <td>Best effort</td>
+</tr>
+</table>
+<p>Support hours: <b>Sunday to Thursday, 09:00 to 18:00 Kuwait time</b>, excluding public holidays. P1 incidents reported outside support hours will be addressed on best-effort basis.</p>
+
+<h2>5. Customer Responsibilities</h2>
+<ol>
+<li>Provide timely access (remote and/or on-site) to the systems, networks, and personnel necessary for the Vendor to render support.</li>
+<li>Maintain valid SSL certificates and renew them in time, in coordination with the Vendor's reminder notifications.</li>
+<li>Maintain regular backups of databases and recordings. The Vendor will assist in recovery but is not responsible for data losses due to absence or corruption of Customer-managed backups.</li>
+<li>Promptly report incidents through the agreed channels (email / phone / ticket system) with sufficient detail to enable diagnosis.</li>
+<li>Not allow unauthorised third parties to modify the deployed system without written approval from the Vendor; such modifications may void AMC coverage for affected components.</li>
+<li>Pay AMC fees as per Section 7 on or before the due date.</li>
+</ol>
+
+<h2>6. Intellectual Property &amp; Confidentiality</h2>
+<ol>
+<li>The Call Centre Solution remains the proprietary product of Centrix Plus. Nothing in this AMC transfers ownership.</li>
+<li>The CRM &amp; Mobile Application has been developed exclusively for Frontline Express; Centrix Plus warrants it will not be sold, licensed, sub-licensed or distributed to any third party.</li>
+<li>Both parties shall observe the confidentiality obligations set out in the separate Non-Disclosure Agreement (NDA) executed between Centrix Plus and Frontline Express, which forms an integral part of this engagement.</li>
+</ol>
+
+<h2>7. AMC Fees &amp; Payment Terms</h2>
+<ol>
+<li>Annual AMC fee: <b>KD 1,000</b> payable in advance at the start of each AMC year.</li>
+<li>Invoice will be raised by the Vendor 30 days prior to the start of each AMC year; payment is due within 15 days of invoice date.</li>
+<li>Late payment beyond 30 days from the due date may, at the Vendor's discretion, result in suspension of priority support until cleared.</li>
+<li>All fees are exclusive of any applicable taxes, which shall be borne by the Customer.</li>
+</ol>
+
+<h2>8. Term, Renewal &amp; Termination</h2>
+<ol>
+<li>This AMC is valid for one (1) year from the Effective Date and shall be reviewed for renewal at least 30 days before expiry.</li>
+<li>Either party may terminate this AMC by giving the other party <b>30 days' prior written notice</b>. Pre-paid AMC fees for the unexpired portion shall be refunded on a pro-rata basis less any work already rendered.</li>
+<li>On termination, the Vendor shall hand over current production configurations and any Customer-owned data; software licences and proprietary code remain governed by Section 6.</li>
+</ol>
+
+<h2>9. Limitation of Liability</h2>
+<p>The Vendor's total aggregate liability under this AMC, whether in contract, tort or otherwise, shall not exceed the AMC fees paid by the Customer in the twelve (12) months immediately preceding the event giving rise to the claim. Neither party shall be liable for indirect, consequential, or loss-of-profit damages.</p>
+
+<h2>10. Force Majeure</h2>
+<p>Neither party shall be liable for delay or failure to perform obligations under this AMC due to events beyond reasonable control, including but not limited to natural disasters, war, civil unrest, telecommunications failures, governmental restrictions, or pandemic measures.</p>
+
+<h2>11. Governing Law &amp; Dispute Resolution</h2>
+<p>This AMC shall be governed by and construed in accordance with the laws of the <b>State of Kuwait</b>. Any dispute arising out of or in connection with this AMC shall first be attempted to be resolved amicably between the parties; failing which, the courts of Kuwait shall have exclusive jurisdiction.</p>
+
+<h2>12. Change Requests</h2>
+<p>Any work requested by the Customer that falls outside the scope of this AMC (as defined in Sections 2 and 3) shall be initiated through a written Change Request and shall be subject to a separate scope, timeline, and quotation, mutually agreed before any work commences.</p>
+
+<h2>13. Entire Agreement</h2>
+<p>This AMC, together with the original Software Development Agreement dated <b>02 April 2025</b> and the NDA executed between the parties, constitutes the entire understanding between the parties with respect to the maintenance and support of the deployed solution. Any amendment must be in writing and signed by both parties.</p>
+
+<div class="page-break"></div>
+
+<h2>14. Signatures</h2>
+
+<table class="sig">
+<tr>
+  <td class="label"><b>For Centrix Plus</b></td>
+  <td class="label"><b>For Frontline Express</b></td>
+</tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+  <td>Name: <u>______________________________</u></td>
+  <td>Name: <u>______________________________</u></td>
+</tr>
+<tr>
+  <td>Designation: <u>______________________</u></td>
+  <td>Designation: <u>______________________</u></td>
+</tr>
+<tr>
+  <td>Signature: <u>________________________</u></td>
+  <td>Signature: <u>________________________</u></td>
+</tr>
+<tr>
+  <td>Date: <u>_____________________________</u></td>
+  <td>Date: <u>_____________________________</u></td>
+</tr>
+<tr>
+  <td>Company Stamp:</td>
+  <td>Company Stamp:</td>
+</tr>
+</table>
+
+</body>
+</html>
