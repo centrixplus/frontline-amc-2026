@@ -151,6 +151,7 @@
 <li>Data entry, content migration, or operational tasks that fall under the Customer's day-to-day business operations.</li>
 <li>Training of new users beyond the initial handover training (refresher / new-batch training quoted separately).</li>
 <li>Force majeure events (natural disasters, telecom outages, power failures, etc.).</li>
+<li><b>Backup &amp; Disaster Recovery infrastructure and operations</b> &mdash; backup hardware, off-site / NAS-based backup solutions, backup verification, retention rotation, and disaster-recovery configuration are covered under the <b>separate Synology backup solution</b> quoted by the Vendor to the Customer, and not within this AMC. The Vendor will assist with recovery from existing valid backups as a normal part of incident handling.</li>
 </ul>
 
 <h2>4. Service Availability</h2>
@@ -159,7 +160,7 @@
 <li>Scheduled maintenance windows (notified to the Customer at least 48 hours in advance);</li>
 <li>Annual upgrade and security-patch windows defined in Section 2;</li>
 <li>Downtime caused by failures in Customer-managed infrastructure (server hardware, OS, internet, power, internal network, third-party services, SSL expiry);</li>
-<li>Force Majeure events as defined in Section 18.</li>
+<li>Force Majeure events as defined in Section 17.</li>
 </ul>
 <p>As the production server is physically hosted at the Customer's premises, end-to-end uptime depends materially on Customer-managed infrastructure. The Vendor's availability commitment is therefore limited to the application layer it operates and maintains.</p>
 
@@ -197,9 +198,9 @@
 <ol>
 <li>Provide support services in accordance with the scope (Section 2), SLAs (Section 5), and availability commitments (Section 4) defined herein.</li>
 <li>Assign qualified personnel familiar with the deployed solution to handle Customer incidents and requests.</li>
-<li>Maintain strict confidentiality of all Customer data and information accessed in the course of providing support, in line with Section 16 and the NDA.</li>
+<li>Maintain strict confidentiality of all Customer data and information accessed in the course of providing support, in line with Section 13 and the NDA.</li>
 <li>Communicate proactively with the Customer during P1/P2 incidents, including periodic status updates until resolution.</li>
-<li>Provide the Customer with the agreed periodic reports (Section 15).</li>
+<li>Provide the Customer with the agreed periodic reports (Section 12).</li>
 <li>Notify the Customer at least 30 days in advance of any vendor-supplied license expiry or planned major maintenance.</li>
 <li>Use Customer-provided credentials and access strictly for the purpose of fulfilling AMC obligations, applying the principle of least privilege.</li>
 <li>Not introduce code, components, or configuration changes into the production environment without Customer awareness and a documented change request, save for break-fix activity during active P1 incidents.</li>
@@ -215,7 +216,7 @@
 <li>Maintain regular backups of databases and recordings in accordance with Section 10. The Vendor will assist in recovery but is not responsible for data losses due to absence or corruption of Customer-managed backups.</li>
 <li>Promptly report incidents through the agreed channels (email / phone / ticket system) with sufficient detail to enable diagnosis.</li>
 <li>Not allow unauthorised third parties to modify the deployed system without written approval from the Vendor; such modifications may void AMC coverage for affected components.</li>
-<li>Pay AMC fees as per Section 15 on or before the due date.</li>
+<li>Pay AMC fees as per Section 14 on or before the due date.</li>
 </ol>
 
 <h2>8. Server Maintenance &amp; System Security Updates</h2>
@@ -228,16 +229,7 @@
 <li>Both parties will cooperate in scheduling maintenance windows to minimise operational impact.</li>
 </ol>
 
-<h2>9. Backup &amp; Disaster Recovery Support</h2>
-<ol>
-<li>The Vendor will configure and document a standard backup routine for the deployed application database and recordings at the start of the AMC (or confirm the existing routine is in place).</li>
-<li>Operational ownership of backups &mdash; including verifying backup completion, retention rotation, and copying backups to off-site or alternative locations &mdash; rests with the Customer.</li>
-<li>The Vendor will assist with <b>recovery from existing valid backups</b> as part of incident response under this AMC.</li>
-<li>The Vendor is not responsible for data losses caused by missing, corrupted, or untested backups maintained by the Customer.</li>
-<li>Full disaster-recovery solutions (geo-redundant standby site, real-time replication, RTO/RPO commitments stricter than recovery from local backup) are outside the scope of this AMC and may be scoped as a separate engagement.</li>
-</ol>
-
-<h2>10. Data Protection &amp; Restrictions</h2>
+<h2>9. Data Protection &amp; Restrictions</h2>
 <ol>
 <li>All Customer data residing in the deployed solution is and remains the sole property of the Customer.</li>
 <li>The Vendor shall access Customer data <b>only to the extent necessary</b> to perform support obligations under this AMC, and not for any other purpose.</li>
@@ -246,7 +238,7 @@
 <li>On termination of this AMC, the Vendor shall not retain copies of Customer data; any diagnostic exports collected during the term will be securely deleted.</li>
 </ol>
 
-<h2>11. Credential Management</h2>
+<h2>10. Credential Management</h2>
 <ol>
 <li>Access credentials provided by the Customer to the Vendor (SSH keys, application admin accounts, database accounts) shall be used by named Vendor personnel only and on the principle of least privilege.</li>
 <li>The Vendor shall not share Customer credentials with any third party.</li>
@@ -255,23 +247,23 @@
 <li>System and admin passwords held within the Vendor-supplied application shall be rotated on Customer request, and at least once per AMC year as part of the annual maintenance window.</li>
 </ol>
 
-<h2>12. License &amp; System Control</h2>
+<h2>11. License &amp; System Control</h2>
 <ol>
 <li>The Call Centre Solution is licensed to the Customer for use at the agreed deployment location and user/seat scale. The Customer shall not redistribute, sub-licence, sell, or otherwise transfer the Call Centre Solution to any third party.</li>
 <li>License keys and seat counts are controlled by the Vendor. Any change in seat count, additional locations, or new feature modules requires a written addendum and may carry additional licence or AMC charges.</li>
 <li>The Vendor shall provide written notification to the Customer at least <b>30 days before</b> the expiry of any vendor-supplied licence, certificate, or subscription that the Vendor has issued or controls.</li>
-<li>The CRM and Mobile Application, developed exclusively for the Customer, are governed by the IP terms in Section 14.</li>
+<li>The CRM and Mobile Application, developed exclusively for the Customer, are governed by the IP terms in Section 13.</li>
 <li>The Customer shall not modify, reverse engineer, decompile, or disassemble the Vendor-supplied code, save to the extent permitted by mandatory law.</li>
 </ol>
 
-<h2>13. Reporting</h2>
+<h2>12. Reporting</h2>
 <ol>
 <li>The Vendor shall provide a <b>quarterly support report</b> summarising tickets raised, incidents resolved, SLA performance against the targets in Section 5, and any pending items.</li>
 <li>An <b>annual AMC review</b> will be held between the parties prior to renewal, covering operational performance, open improvement items, planned upgrades for the next cycle, and any commercial matters.</li>
 <li>Ad-hoc reports outside this standard reporting cadence may be requested by the Customer and will be provided on best-effort basis within reasonable timelines.</li>
 </ol>
 
-<h2>14. Intellectual Property, Confidentiality &amp; Security</h2>
+<h2>13. Intellectual Property, Confidentiality &amp; Security</h2>
 <ol>
 <li>The Call Centre Solution remains the proprietary product of Centrix Plus. Nothing in this AMC transfers ownership.</li>
 <li>The CRM &amp; Mobile Application has been developed exclusively for Frontline Express; Centrix Plus warrants it will not be sold, licensed, sub-licensed or distributed to any third party.</li>
@@ -281,7 +273,7 @@
 <li>Confidentiality obligations under this AMC and the NDA shall survive termination of this AMC for a period of three (3) years.</li>
 </ol>
 
-<h2>15. AMC Fees &amp; Payment Terms</h2>
+<h2>14. AMC Fees &amp; Payment Terms</h2>
 <ol>
 <li>Annual AMC fee: <b>KD 1,000</b> payable in advance at the start of each AMC year.</li>
 <li>Invoice will be raised by the Vendor 30 days prior to the start of each AMC year; payment is due within 15 days of invoice date.</li>
@@ -289,31 +281,31 @@
 <li>All fees are exclusive of any applicable taxes, which shall be borne by the Customer.</li>
 </ol>
 
-<h2>16. Term, Renewal &amp; Termination</h2>
+<h2>15. Term, Renewal &amp; Termination</h2>
 <ol>
 <li>This AMC is valid for one (1) year from the Effective Date and shall be reviewed for renewal at least 30 days before expiry.</li>
 <li>Either party may terminate this AMC by giving the other party <b>30 days' prior written notice</b>. Pre-paid AMC fees for the unexpired portion shall be refunded on a pro-rata basis less any work already rendered.</li>
-<li>On termination, the Vendor shall hand over current production configurations and any Customer-owned data; software licences and proprietary code remain governed by Section 14.</li>
+<li>On termination, the Vendor shall hand over current production configurations and any Customer-owned data; software licences and proprietary code remain governed by Section 13.</li>
 </ol>
 
-<h2>17. Limitation of Liability</h2>
+<h2>16. Limitation of Liability</h2>
 <p>The Vendor's total aggregate liability under this AMC, whether in contract, tort or otherwise, shall not exceed the AMC fees paid by the Customer in the twelve (12) months immediately preceding the event giving rise to the claim. Neither party shall be liable for indirect, consequential, or loss-of-profit damages.</p>
 
-<h2>18. Force Majeure</h2>
+<h2>17. Force Majeure</h2>
 <p>Neither party shall be liable for delay or failure to perform obligations under this AMC due to events beyond reasonable control, including but not limited to natural disasters, war, civil unrest, telecommunications failures, governmental restrictions, or pandemic measures.</p>
 
-<h2>19. Governing Law &amp; Dispute Resolution</h2>
+<h2>18. Governing Law &amp; Dispute Resolution</h2>
 <p>This AMC shall be governed by and construed in accordance with the laws of the <b>State of Kuwait</b>. Any dispute arising out of or in connection with this AMC shall first be attempted to be resolved amicably between the parties; failing which, the courts of Kuwait shall have exclusive jurisdiction.</p>
 
-<h2>20. Change Requests</h2>
+<h2>19. Change Requests</h2>
 <p>Any work requested by the Customer that falls outside the scope of this AMC (as defined in Sections 2 and 3) shall be initiated through a written Change Request and shall be subject to a separate scope, timeline, and quotation, mutually agreed before any work commences.</p>
 
-<h2>21. Entire Agreement</h2>
+<h2>20. Entire Agreement</h2>
 <p>This AMC, together with the original Software Development Agreement dated <b>02 April 2025</b> and the NDA executed between the parties, constitutes the entire understanding between the parties with respect to the maintenance and support of the deployed solution. Any amendment must be in writing and signed by both parties.</p>
 
 <div class="page-break"></div>
 
-<h2>22. Signatures</h2>
+<h2>21. Signatures</h2>
 
 <table class="sig">
 <tr>
