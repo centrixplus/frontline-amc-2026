@@ -1,339 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AMC Agreement — Centrix Plus &amp; Frontline Express</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Centrix Plus &times; Frontline Express — Document Hub</title>
 <style>
-  /* ===== Print page setup ===== */
-  @page {
-    size: A4;
-    margin: 22mm 28mm 22mm 28mm;   /* top right bottom left — more breathing room L/R */
-  }
-
-  /* ===== Screen + print shared ===== */
+  * { box-sizing: border-box; }
   body {
-    font-family: Calibri, Arial, sans-serif;
-    font-size: 10.5pt;
-    color: #1a1a1a;
-    line-height: 1.5;
-    max-width: 780px;
-    margin: 30px auto;
-    padding: 0 60px;               /* generous L/R gutter on screen */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Calibri, Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f6fa 0%, #e8edf5 100%);
+    color: #222;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    line-height: 1.55;
   }
-  h1 { font-size: 17pt; text-align: center; margin-bottom: 4px; }
-  h2 {
-    font-size: 12.5pt;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    border-bottom: 1px solid #999;
-    padding-bottom: 3px;
-    page-break-after: avoid;
-    break-after: avoid;
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(26, 61, 124, 0.08);
+    overflow: hidden;
   }
-  h3 {
-    font-size: 11pt;
-    margin-top: 12px;
-    margin-bottom: 4px;
-    page-break-after: avoid;
-    break-after: avoid;
+  .header {
+    background: linear-gradient(135deg, #1a3d7c 0%, #2a5fa8 100%);
+    color: #fff;
+    padding: 36px 40px 28px;
   }
-  p {
-    margin-top: 4px;
-    margin-bottom: 8px;
-    orphans: 3;
-    widows: 3;
+  .header h1 {
+    margin: 0 0 6px 0;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
   }
-  .subtitle { text-align: center; margin-top: 0; font-size: 11pt; color: #555; }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 8px 0 12px 0;
-    page-break-inside: avoid;
-    break-inside: avoid;
+  .header .subtitle {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.85;
   }
-  td, th {
-    border: 1px solid #888;
-    padding: 5px 8px;
-    text-align: left;
-    vertical-align: top;
+  .header .meta {
+    margin-top: 14px;
+    font-size: 13px;
+    opacity: 0.75;
   }
-  th { background: #f0f0f0; }
-  ol, ul {
-    margin-top: 4px;
-    margin-bottom: 8px;
+  .content {
+    padding: 32px 40px 40px;
   }
-  li {
-    margin-bottom: 3px;
-    page-break-inside: avoid;
-    break-inside: avoid;
+  .section-title {
+    color: #1a3d7c;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 28px 0 14px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e6f0;
   }
-
-  /* Keep heading + its first paragraph/table together */
-  h2 + p, h2 + table, h2 + ol, h2 + ul,
-  h3 + p, h3 + table, h3 + ol, h3 + ul {
-    page-break-before: avoid;
-    break-before: avoid;
+  .section-title:first-child { margin-top: 0; }
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
-
-  /* Signature block — never split */
-  .sig {
-    margin-top: 30px;
-    page-break-inside: avoid;
-    break-inside: avoid;
+  .doc-card {
+    display: block;
+    background: #fafbfc;
+    border: 1px solid #e0e6f0;
+    border-left: 4px solid #1a3d7c;
+    border-radius: 8px;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
   }
-  .sig td { border: none; padding: 4px 8px; }
-  .sig .label { width: 50%; }
-
-  /* Force major section onto a new page if it would otherwise dangle */
-  .page-break { page-break-before: always; break-before: page; }
-
-  .clause-num { font-weight: bold; }
-
-  /* ===== Print-only refinements ===== */
-  @media print {
-    body {
-      margin: 0;
-      padding: 0;            /* @page margins handle the L/R gutter on print */
-      max-width: none;
-      font-size: 10.5pt;
-    }
-    h1 { margin-top: 0; }
-    a { color: #1a1a1a; text-decoration: none; }
+  .doc-card:hover {
+    background: #f0f4fb;
+    border-left-color: #2a5fa8;
+    transform: translateX(2px);
+    box-shadow: 0 2px 12px rgba(26, 61, 124, 0.1);
+  }
+  .doc-card .doc-title {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #1a3d7c;
+    margin: 0 0 4px 0;
+  }
+  .doc-card .doc-desc {
+    font-size: 13.5px;
+    color: #555;
+    margin: 0;
+  }
+  .doc-card .doc-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    background: #1a3d7c;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .doc-card .doc-tag.new { background: #2a8f2a; }
+  .doc-card .doc-tag.review { background: #c87a00; }
+  .footer {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e6f0;
+    font-size: 12.5px;
+    color: #777;
+    text-align: center;
+  }
+  .footer a { color: #1a3d7c; text-decoration: none; }
+  @media (max-width: 600px) {
+    .header { padding: 24px 22px 20px; }
+    .header h1 { font-size: 21px; }
+    .content { padding: 22px 22px 28px; }
   }
 </style>
 </head>
 <body>
 
-<h1>ANNUAL MAINTENANCE CONTRACT (AMC)</h1>
-<p class="subtitle">Software Support &amp; Maintenance Agreement</p>
+<div class="container">
 
-<table>
-<tr><th style="width: 25%;">Effective Date</th><td><b>01 May 2026</b></td></tr>
-<tr><th>Term</th><td><b>01 May 2026 to 30 April 2027</b> (One year), renewable annually by mutual agreement</td></tr>
-<tr><th>Annual AMC Fee</th><td>KD 1,000 (Kuwaiti Dinar One Thousand only) per annum, exclusive of taxes</td></tr>
-<tr><th>Provider</th><td><b>Centrix Plus</b> (hereinafter "the Vendor")</td></tr>
-<tr><th>Customer</th><td><b>Frontline Express</b> (hereinafter "the Customer")</td></tr>
-</table>
+  <div class="header">
+    <h1>Centrix Plus &times; Frontline Express</h1>
+    <p class="subtitle">Contractual Document Hub — Agreements &amp; Correspondence</p>
+    <div class="meta">Last updated: 20 May 2026 &middot; Confidential between the parties</div>
+  </div>
 
-<h2>Preamble</h2>
-<p>The deployed solution has been operational at the Customer's premises since <b>23 April 2025</b>, with the Vendor providing technical support throughout that period at no additional charge. This Agreement formalises the ongoing maintenance and support arrangement on a structured contractual basis with effect from the Effective Date stated above.</p>
+  <div class="content">
 
-<h2>1. Scope of Solution Covered Under This AMC</h2>
-<p>The Vendor has implemented a two-part integrated solution at the Customer's premises, comprising the following components, all of which are covered under this AMC:</p>
+    <div class="section-title">Annual Maintenance Contract (AMC)</div>
+    <div class="doc-grid">
+      <a class="doc-card" href="AMC_Agreement_Centrix_Frontline.html">
+        <p class="doc-title">AMC Agreement — Final v3<span class="doc-tag">Live</span></p>
+        <p class="doc-desc">21-section maintenance and support agreement covering Call Centre Solution, CRM &amp; Mobile Application. Backup &amp; DR section removed (covered under separate Synology quote). Effective 01 May 2026.</p>
+      </a>
+    </div>
 
-<h3>1.1 Call Centre Solution</h3>
-<p>A proprietary call-centre / contact-centre platform owned and developed by Centrix Plus. The Customer is granted a license to use this software at the agreed location and user scale. The underlying intellectual property, source code, and all derivative rights to the Call Centre Solution remain the exclusive property of <b>Centrix Plus</b>.</p>
+    <div class="section-title">Non-Disclosure Agreement (NDA)</div>
+    <div class="doc-grid">
+      <a class="doc-card" href="NDA_Redline_Centrix_Counterproposal.html">
+        <p class="doc-title">NDA Redline &amp; Counter-Proposal<span class="doc-tag new">New</span></p>
+        <p class="doc-desc">Centrix Plus review of Frontline's draft NDA dated 23 April 2025, with 11 proposed amendments (3 high-priority, 5 medium, 2 low, 1 new). All Frontline data-protection clauses accepted; refinements focus on liability cap, term length, vendor IP carve-out, and alignment with the AMC.</p>
+      </a>
+      <a class="doc-card" href="reply_NDA_email.html">
+        <p class="doc-title">Cover Email — NDA Review Submission<span class="doc-tag review">For Review</span></p>
+        <p class="doc-desc">Professional cover letter accompanying the NDA redline, summarising key amendments and proposing next steps (internal review or alignment call).</p>
+      </a>
+    </div>
 
-<h3>1.2 CRM &amp; Mobile Application</h3>
-<p>A customer relationship management (CRM) system and accompanying mobile application, designed and developed <b>exclusively for Frontline Express</b>. Centrix Plus undertakes that this custom-built CRM and Mobile Application <b>shall not be licensed, sold, sub-licensed, or otherwise transferred to any third party</b> during or after the term of this Agreement. Centrix Plus retains the underlying source code and technology rights; the Customer holds an exclusive, perpetual right of use for the deployed instance.</p>
+    <div class="footer">
+      <p>This page is private and not indexed by search engines.<br>
+      Centrix Plus Integrated Solution &mdash; FZCO &middot; <a href="mailto:burhan@centrixplus.com">burhan@centrixplus.com</a></p>
+    </div>
 
-<h2>2. AMC Coverage — What Is Included</h2>
-<ol>
-<li><b>Software maintenance</b> of the current production build of the Call Centre Solution, CRM, and Mobile Application as deployed on the Effective Date.</li>
-<li><b>Bug fixes and error resolution</b> for any defects or malfunctions arising from the existing functionality during the AMC period.</li>
-<li><b>Priority support</b> for incidents reported by the Customer, with response targets as defined in Section 5 below.</li>
-<li><b>Remote technical support</b> for system issues, database recovery from existing backups, configuration assistance, and troubleshooting.</li>
-<li><b>Minor configuration changes</b> within the scope of existing functionality (e.g. campaign tweaks, user setup, role permissions).</li>
-<li><b>Annual license renewal notification</b> sent in writing to the Customer at least <b>30 days prior</b> to any expiry of Vendor-supplied software components.</li>
-<li><b>Annual version upgrade</b> of the Call Centre application to the next maintenance release, scheduled once per AMC year at a mutually agreed maintenance window. Major version migrations involving significant architectural change are outside this AMC and quoted separately.</li>
-<li><b>Annual security patching</b> of the Call Centre application and Vendor-supplied components, scheduled once per AMC year. Critical out-of-band security advisories will be assessed case-by-case and applied where the Vendor determines material risk exists.</li>
-<li><b>Up to two (2) on-site visits per AMC year</b> within Kuwait at no additional charge; additional on-site visits will be billed at the Vendor's then-prevailing rate.</li>
-</ol>
-
-<h2>3. Exclusions — What Is NOT Covered</h2>
-<p>The following are explicitly outside the scope of this AMC and shall be subject to a separate written scope and quotation if requested:</p>
-<ul>
-<li>New feature development, new modules, custom reports, integrations with new third-party systems, or any enhancement beyond the existing functionality of the deployed build.</li>
-<li>Server hardware, operating system, network infrastructure, internet connectivity, and any data-centre or hosting-related issues.</li>
-<li>SSL certificate procurement, renewal, and installation. The Customer retains responsibility for SSL ownership and renewal; the Vendor will only provide reminder notifications. SSL installation work, if requested outside the AMC, will be quoted separately (and provided free of charge during an active AMC year as a goodwill inclusion).</li>
-<li>Third-party software, services, licenses or APIs not supplied by the Vendor (telco carrier services, payment gateways, SMS gateways, etc.).</li>
-<li>Issues caused by Customer-side changes, unauthorised modifications, or third-party intervention to the deployed system.</li>
-<li>Data entry, content migration, or operational tasks that fall under the Customer's day-to-day business operations.</li>
-<li>Training of new users beyond the initial handover training (refresher / new-batch training quoted separately).</li>
-<li>Force majeure events (natural disasters, telecom outages, power failures, etc.).</li>
-<li><b>Backup &amp; Disaster Recovery infrastructure and operations</b> &mdash; backup hardware, off-site / NAS-based backup solutions, backup verification, retention rotation, and disaster-recovery configuration are covered under the <b>separate Synology backup solution</b> quoted by the Vendor to the Customer, and not within this AMC. The Vendor will assist with recovery from existing valid backups as a normal part of incident handling.</li>
-</ul>
-
-<h2>4. Service Availability</h2>
-<p>The Vendor shall make commercially reasonable efforts to ensure the deployed application layer remains available during the defined support hours (Section 5). The target application availability is <b>98% per calendar month</b>, measured during support hours and excluding:</p>
-<ul>
-<li>Scheduled maintenance windows (notified to the Customer at least 48 hours in advance);</li>
-<li>Annual upgrade and security-patch windows defined in Section 2;</li>
-<li>Downtime caused by failures in Customer-managed infrastructure (server hardware, OS, internet, power, internal network, third-party services, SSL expiry);</li>
-<li>Force Majeure events as defined in Section 17.</li>
-</ul>
-<p>As the production server is physically hosted at the Customer's premises, end-to-end uptime depends materially on Customer-managed infrastructure. The Vendor's availability commitment is therefore limited to the application layer it operates and maintains.</p>
-
-<h2>5. Service Levels &amp; Response Times</h2>
-<table>
-<tr><th>Severity</th><th>Definition</th><th>Response</th><th>Targeted Resolution</th></tr>
-<tr>
-  <td><b>P1 — Critical</b></td>
-  <td>Production system fully down; no calls/CRM/mobile usable</td>
-  <td>Within <b>2 working hours</b></td>
-  <td>Within 1 working day, where feasible</td>
-</tr>
-<tr>
-  <td><b>P2 — High</b></td>
-  <td>Major function impacted but workaround possible</td>
-  <td>Within <b>4 working hours</b></td>
-  <td>Within 3 working days</td>
-</tr>
-<tr>
-  <td><b>P3 — Medium</b></td>
-  <td>Minor function affected; system largely usable</td>
-  <td>Within <b>1 working day</b></td>
-  <td>Best effort, typically within 5–10 working days</td>
-</tr>
-<tr>
-  <td><b>P4 — Low</b></td>
-  <td>Cosmetic, configuration, or query</td>
-  <td>Within <b>2 working days</b></td>
-  <td>Best effort</td>
-</tr>
-</table>
-<p>Support hours: <b>Sunday to Thursday, 09:00 to 18:00 Kuwait time</b>, excluding public holidays. P1 incidents reported outside support hours will be addressed on best-effort basis.</p>
-
-<h2>6. Vendor Responsibilities</h2>
-<ol>
-<li>Provide support services in accordance with the scope (Section 2), SLAs (Section 5), and availability commitments (Section 4) defined herein.</li>
-<li>Assign qualified personnel familiar with the deployed solution to handle Customer incidents and requests.</li>
-<li>Maintain strict confidentiality of all Customer data and information accessed in the course of providing support, in line with Section 13 and the NDA.</li>
-<li>Communicate proactively with the Customer during P1/P2 incidents, including periodic status updates until resolution.</li>
-<li>Provide the Customer with the agreed periodic reports (Section 12).</li>
-<li>Notify the Customer at least 30 days in advance of any vendor-supplied license expiry or planned major maintenance.</li>
-<li>Use Customer-provided credentials and access strictly for the purpose of fulfilling AMC obligations, applying the principle of least privilege.</li>
-<li>Not introduce code, components, or configuration changes into the production environment without Customer awareness and a documented change request, save for break-fix activity during active P1 incidents.</li>
-</ol>
-
-<h2>7. Customer Responsibilities</h2>
-<ol>
-<li>Provide timely access (remote and/or on-site) to the systems, networks, and personnel necessary for the Vendor to render support.</li>
-<li><b>Physical security of the production server</b>, including premises access control, locked server room/cabinet, fire/flood protection, power continuity (UPS / backup power), and protection against unauthorised physical access, theft, or vandalism &mdash; as the server is hosted at the Customer's office, these are entirely under Customer control.</li>
-<li><b>Network and cyber-security perimeter defence.</b> As the production server resides on the Customer's premises and within the Customer's network, the prevention of cyber-attacks, hacking attempts, unauthorised remote intrusions, denial-of-service attacks, and any other external or internal network-borne threats shall be the responsibility of the <b>Customer's IT team</b>. This includes (without limitation) firewall configuration and monitoring, intrusion detection/prevention systems, endpoint protection, VPN management, internet-edge security, network segmentation, periodic vulnerability scanning, and ensuring only authorised devices/users have network-level access to the server.</li>
-<li>Server hardware maintenance, internet connectivity, internal network, and operating-system level administration (excluding Vendor-supplied application components).</li>
-<li>Maintain valid SSL certificates and renew them in time, in coordination with the Vendor's reminder notifications.</li>
-<li>Maintain regular backups of databases and recordings in accordance with Section 10. The Vendor will assist in recovery but is not responsible for data losses due to absence or corruption of Customer-managed backups.</li>
-<li>Promptly report incidents through the agreed channels (email / phone / ticket system) with sufficient detail to enable diagnosis.</li>
-<li>Not allow unauthorised third parties to modify the deployed system without written approval from the Vendor; such modifications may void AMC coverage for affected components.</li>
-<li>Pay AMC fees as per Section 14 on or before the due date.</li>
-</ol>
-
-<h2>8. Server Maintenance &amp; System Security Updates</h2>
-<ol>
-<li><b>Server hardware, OS-level patching, internet, power, and physical security</b> remain with the Customer, as the production server is hosted at the Customer's office. The Vendor's maintenance scope covers the application layer and Vendor-supplied components only.</li>
-<li>The Vendor will apply <b>application-level security patches once per AMC year</b> as part of the scheduled annual maintenance window, in line with the Customer's stated company policy for call-centre systems.</li>
-<li>Critical out-of-band security advisories affecting the deployed application will be assessed by the Vendor. Where material risk is identified, the Vendor will recommend an out-of-cycle patch and coordinate a maintenance window with the Customer; such work remains within AMC scope.</li>
-<li>OS-level security patches, kernel updates, firewall configuration, and intrusion-prevention measures on the underlying server fall under the Customer's IT scope and are not the Vendor's responsibility unless contracted separately.</li>
-<li><b>Cyber-attack prevention.</b> Because the server is physically located on the Customer's premises and connected to the Customer's network, any defence against hacking, unauthorised remote access, malware, ransomware, phishing-led intrusions, and similar cyber threats is the responsibility of the Customer's IT team. The Vendor shall not be liable for damages, downtime, or data compromise arising from network-borne attacks reaching the server through the Customer's network perimeter.</li>
-<li>Both parties will cooperate in scheduling maintenance windows to minimise operational impact.</li>
-</ol>
-
-<h2>9. Data Protection &amp; Restrictions</h2>
-<ol>
-<li>All Customer data residing in the deployed solution is and remains the sole property of the Customer.</li>
-<li>The Vendor shall access Customer data <b>only to the extent necessary</b> to perform support obligations under this AMC, and not for any other purpose.</li>
-<li>The Vendor shall not copy, extract, transfer, or transmit Customer data outside the Customer's environment without the Customer's prior written consent, except for diagnostic snippets minimally required to troubleshoot a reported issue.</li>
-<li>Any Customer data accessed by the Vendor in the course of support shall be handled in accordance with the NDA and applicable data-protection norms in the State of Kuwait.</li>
-<li>On termination of this AMC, the Vendor shall not retain copies of Customer data; any diagnostic exports collected during the term will be securely deleted.</li>
-</ol>
-
-<h2>10. Credential Management</h2>
-<ol>
-<li>Access credentials provided by the Customer to the Vendor (SSH keys, application admin accounts, database accounts) shall be used by named Vendor personnel only and on the principle of least privilege.</li>
-<li>The Vendor shall not share Customer credentials with any third party.</li>
-<li>The Customer may rotate or revoke any credential at any time; the Vendor will require new credentials to continue providing support thereafter.</li>
-<li>The Vendor shall notify the Customer of any change in personnel having access to Customer systems, so the Customer may rotate credentials if required.</li>
-<li>System and admin passwords held within the Vendor-supplied application shall be rotated on Customer request, and at least once per AMC year as part of the annual maintenance window.</li>
-</ol>
-
-<h2>11. License &amp; System Control</h2>
-<ol>
-<li>The Call Centre Solution is licensed to the Customer for use at the agreed deployment location and user/seat scale. The Customer shall not redistribute, sub-licence, sell, or otherwise transfer the Call Centre Solution to any third party.</li>
-<li>License keys and seat counts are controlled by the Vendor. Any change in seat count, additional locations, or new feature modules requires a written addendum and may carry additional licence or AMC charges.</li>
-<li>The Vendor shall provide written notification to the Customer at least <b>30 days before</b> the expiry of any vendor-supplied licence, certificate, or subscription that the Vendor has issued or controls.</li>
-<li>The CRM and Mobile Application, developed exclusively for the Customer, are governed by the IP terms in Section 13.</li>
-<li>The Customer shall not modify, reverse engineer, decompile, or disassemble the Vendor-supplied code, save to the extent permitted by mandatory law.</li>
-</ol>
-
-<h2>12. Reporting</h2>
-<ol>
-<li>The Vendor shall provide a <b>quarterly support report</b> summarising tickets raised, incidents resolved, SLA performance against the targets in Section 5, and any pending items.</li>
-<li>An <b>annual AMC review</b> will be held between the parties prior to renewal, covering operational performance, open improvement items, planned upgrades for the next cycle, and any commercial matters.</li>
-<li>Ad-hoc reports outside this standard reporting cadence may be requested by the Customer and will be provided on best-effort basis within reasonable timelines.</li>
-</ol>
-
-<h2>13. Intellectual Property, Confidentiality &amp; Security</h2>
-<ol>
-<li>The Call Centre Solution remains the proprietary product of Centrix Plus. Nothing in this AMC transfers ownership.</li>
-<li>The CRM &amp; Mobile Application has been developed exclusively for Frontline Express; Centrix Plus warrants it will not be sold, licensed, sub-licensed or distributed to any third party.</li>
-<li>Both parties shall observe the confidentiality obligations set out in the separate Non-Disclosure Agreement (NDA) executed between Centrix Plus and Frontline Express, which forms an integral part of this engagement.</li>
-<li>The Vendor shall apply reasonable technical and organisational security measures to any Customer data or credentials in its possession during the term of this AMC, including encrypted storage of access keys, restricted personnel access, and prompt revocation upon staff changes.</li>
-<li>Either party shall promptly notify the other in writing of any actual or reasonably suspected security breach involving the deployed solution or Customer data, and cooperate in investigation and remediation.</li>
-<li>Confidentiality obligations under this AMC and the NDA shall survive termination of this AMC for a period of three (3) years.</li>
-</ol>
-
-<h2>14. AMC Fees &amp; Payment Terms</h2>
-<ol>
-<li>Annual AMC fee: <b>KD 1,000</b> payable in advance at the start of each AMC year.</li>
-<li>Invoice will be raised by the Vendor 30 days prior to the start of each AMC year; payment is due within 15 days of invoice date.</li>
-<li>Late payment beyond 30 days from the due date may, at the Vendor's discretion, result in suspension of priority support until cleared.</li>
-<li>All fees are exclusive of any applicable taxes, which shall be borne by the Customer.</li>
-</ol>
-
-<h2>15. Term, Renewal &amp; Termination</h2>
-<ol>
-<li>This AMC is valid for one (1) year from the Effective Date and shall be reviewed for renewal at least 30 days before expiry.</li>
-<li>Either party may terminate this AMC by giving the other party <b>30 days' prior written notice</b>. Pre-paid AMC fees for the unexpired portion shall be refunded on a pro-rata basis less any work already rendered.</li>
-<li>On termination, the Vendor shall hand over current production configurations and any Customer-owned data; software licences and proprietary code remain governed by Section 13.</li>
-</ol>
-
-<h2>16. Limitation of Liability</h2>
-<p>The Vendor's total aggregate liability under this AMC, whether in contract, tort or otherwise, shall not exceed the AMC fees paid by the Customer in the twelve (12) months immediately preceding the event giving rise to the claim. Neither party shall be liable for indirect, consequential, or loss-of-profit damages.</p>
-
-<h2>17. Force Majeure</h2>
-<p>Neither party shall be liable for delay or failure to perform obligations under this AMC due to events beyond reasonable control, including but not limited to natural disasters, war, civil unrest, telecommunications failures, governmental restrictions, or pandemic measures.</p>
-
-<h2>18. Governing Law &amp; Dispute Resolution</h2>
-<p>This AMC shall be governed by and construed in accordance with the laws of the <b>State of Kuwait</b>. Any dispute arising out of or in connection with this AMC shall first be attempted to be resolved amicably between the parties; failing which, the courts of Kuwait shall have exclusive jurisdiction.</p>
-
-<h2>19. Change Requests</h2>
-<p>Any work requested by the Customer that falls outside the scope of this AMC (as defined in Sections 2 and 3) shall be initiated through a written Change Request and shall be subject to a separate scope, timeline, and quotation, mutually agreed before any work commences.</p>
-
-<h2>20. Entire Agreement</h2>
-<p>This AMC, together with the original Software Development Agreement dated <b>02 April 2025</b> and the NDA executed between the parties, constitutes the entire understanding between the parties with respect to the maintenance and support of the deployed solution. Any amendment must be in writing and signed by both parties.</p>
-
-<div class="page-break"></div>
-
-<h2>21. Signatures</h2>
-
-<table class="sig">
-<tr>
-  <td class="label"><b>For Centrix Plus</b></td>
-  <td class="label"><b>For Frontline Express</b></td>
-</tr>
-<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-  <td>Name: <u>______________________________</u></td>
-  <td>Name: <u>______________________________</u></td>
-</tr>
-<tr>
-  <td>Designation: <u>______________________</u></td>
-  <td>Designation: <u>______________________</u></td>
-</tr>
-<tr>
-  <td>Signature: <u>________________________</u></td>
-  <td>Signature: <u>________________________</u></td>
-</tr>
-<tr>
-  <td>Date: <u>_____________________________</u></td>
-  <td>Date: <u>_____________________________</u></td>
-</tr>
-<tr>
-  <td>Company Stamp:</td>
-  <td>Company Stamp:</td>
-</tr>
-</table>
+  </div>
+</div>
 
 </body>
 </html>
