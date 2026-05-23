@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMC Comparison Table — Centrix Plus v3 vs Frontline's Counter vs Recommended</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; max-width: 1400px; margin: 25px auto; padding: 0 25px; color: #222; line-height: 1.5; font-size: 14px; }
+  h1 { color: #1a3d7c; border-bottom: 3px solid #1a3d7c; padding-bottom: 10px; }
+  h2 { color: #1a3d7c; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 4px; font-size: 18px; }
+  .meta { background: #f4f6fa; border-left: 4px solid #1a3d7c; padding: 12px 18px; margin-bottom: 25px; font-size: 13px; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin: 14px 0 22px 0; font-size: 13px; }
+  .legend-item { padding: 4px 10px; border-radius: 4px; }
+  .red { background: #fcd4d4; color: #8b0000; }
+  .amber { background: #ffe9c2; color: #7a4a00; }
+  .green { background: #d4f4d4; color: #1a5e1a; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0 25px 0; font-size: 13px; }
+  th { background: #1a3d7c; color: white; padding: 10px 8px; text-align: left; vertical-align: top; font-size: 13px; }
+  td { border: 1px solid #ccc; padding: 9px 10px; vertical-align: top; }
+  th.section { width: 4%; }
+  th.topic { width: 12%; }
+  th.col { width: 23%; }
+  th.priority { width: 8%; }
+  tr.priority-high td { background: #fff5f5; }
+  tr.priority-med td { background: #fffbe6; }
+  tr.priority-low td { background: #f1faf1; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 7px; border-radius: 3px; font-weight: 600; }
+  .tag-high { background: #d33; color: white; }
+  .tag-med { background: #e69500; color: white; }
+  .tag-low { background: #2a8f2a; color: white; }
+  .tag-ok { background: #1a3d7c; color: white; }
+  del { background: #fcd4d4; text-decoration: line-through; padding: 0 2px; }
+  ins { background: #d4f4d4; text-decoration: none; padding: 0 2px; }
+  .summary-box { background: #f4f6fa; border: 2px solid #1a3d7c; border-radius: 8px; padding: 18px 22px; margin: 25px 0; }
+  .summary-box h3 { color: #1a3d7c; margin-top: 0; }
+  .footnote { font-size: 12px; color: #666; font-style: italic; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<h1>AMC Comparison Table</h1>
+
+<div class="meta">
+  <strong>Centrix Plus v3</strong> (sent to Frontline 18 May 2026) &nbsp;|&nbsp; <strong>Frontline Counter</strong> (received 23 May 2026) &nbsp;|&nbsp; <strong>Centrix Plus Recommended Position</strong><br>
+  <strong>Prepared:</strong> 23 May 2026 &nbsp;|&nbsp; <strong>Prepared by:</strong> Centrix Plus Integrated Solution — FZCO
+</div>
+
+<div class="legend">
+  <span class="legend-item red"><strong>High Priority</strong> — Commercially Material, Must Be Addressed</span>
+  <span class="legend-item amber"><strong>Medium Priority</strong> — Operational / Cost Concern</span>
+  <span class="legend-item green"><strong>Low Priority</strong> — Drafting / Housekeeping</span>
+</div>
+
+<div class="summary-box">
+  <h3>Executive Summary</h3>
+  <p>Frontline's counter-version of the AMC has been carefully reviewed. While the core structure of our v3 has been preserved, the customer has loaded the contract with significant additional obligations, tightened SLAs to enterprise-grade levels, extended liability beyond commercial proportionality, and removed the Vendor's ability to enforce payment terms. <strong>For the unchanged annual fee of KD 1,000, the total cost of delivery now substantially exceeds the AMC value.</strong> Centrix Plus is prepared to accept many proposed clarifications, but the items marked <span class="tag tag-high">High</span> must be revised to make the agreement commercially executable.</p>
+</div>
+
+<h2>Section-by-Section Comparison</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th class="section">§</th>
+      <th class="topic">Topic</th>
+      <th class="col">Centrix Plus v3</th>
+      <th class="col">Frontline Counter</th>
+      <th class="col">Recommended Centrix Position</th>
+      <th class="priority">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="priority-high">
+      <td>2.8</td>
+      <td>Security Patching Scope</td>
+      <td>Annual patching of <em>Call Centre application + Vendor-supplied components</em>.</td>
+      <td>Added "<ins>and OS</ins>" — vendor now patches the operating system.</td>
+      <td>Reject "OS" — OS-level patching remains with Customer IT (consistent with Section 8.1). Vendor patches application + Vendor-supplied components only.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>2.9</td>
+      <td>On-site Visits</td>
+      <td><strong>2 visits/year</strong> at no charge.</td>
+      <td><strong>4 visits/year</strong> at no charge.</td>
+      <td>Accept <strong>3 visits/year</strong> as middle ground; additional billed at then-prevailing rate.</td>
+      <td><span class="tag tag-med">Medium</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>3</td>
+      <td>Exclusions Weakening</td>
+      <td>Explicitly excludes server hardware, OS, network, SSL installation, B&amp;DR.</td>
+      <td>Removed: server hardware/OS exclusion, SSL installation exclusion, B&amp;DR exclusion. Added soft "standard client integrations" back-door for free dev work.</td>
+      <td>Restore all original exclusions. Define "standard client integrations" precisely or remove the phrase — undefined scope creates unbounded scope.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>5</td>
+      <td>SLA Response Times</td>
+      <td>P1: 2 working hours / P2: 4 hrs / P3: 1 day / P4: 2 days</td>
+      <td>P1: <strong>30 min</strong> / P2: 1 hr / P3: 4 hrs / P4: 1 day</td>
+      <td>Counter: P1: 1 working hour / P2: 4 hrs / P3: 1 day / P4: 2 days — meets industry standard for small-vendor support without requiring 24×7 staffing.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>5</td>
+      <td>SLA Resolution Times</td>
+      <td>P1: 1 working day / P2: 3 days / P3: 5–10 days / P4: best effort</td>
+      <td>P1: <strong>2 hours</strong> / P2: 6 hrs / P3: 2 days / P4: 4 days</td>
+      <td>Counter: P1: 1 working day / P2: 3 working days / P3: 5 working days / P4: best effort. Add caveat: resolution targets are <em>"commercially reasonable best effort"</em> not contractual guarantees.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>5</td>
+      <td>24×7 P1 Coverage</td>
+      <td>P1 outside support hours = best effort.</td>
+      <td>P1 = full 24×7 including weekends + public holidays.</td>
+      <td>Accept 24×7 acknowledgement of P1 incidents (within 2 hours), with resolution best-effort. Full on-site / engineer dispatch limited to business hours unless after-hours support contracted separately.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>5</td>
+      <td>Escalation Matrix &amp; SPOC</td>
+      <td>Not specified.</td>
+      <td>4-level escalation matrix with hotline, named SPOCs, designated emails.</td>
+      <td>Accept in principle. Provide named SPOC (Technical Manager) and group support email — single escalation contact rather than 4 named individuals.</td>
+      <td><span class="tag tag-med">Medium</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>8.2</td>
+      <td>3-Year Hardware Warranty</td>
+      <td>Not present. Hardware/OS responsibility = Customer.</td>
+      <td>Vendor responsible for <strong>3 years</strong> warranty + service + support on DMS, PBX, and Backup Servers — including <strong>OS, security patches, system security updates</strong>.</td>
+      <td>Reject as drafted. Hardware warranty terms must mirror the original-equipment-manufacturer (OEM) warranty period (typically 1 year, extendable). OS patching remains Customer scope. Centrix Plus can offer extended hardware support as a <strong>separately priced add-on</strong>.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>8.3</td>
+      <td>Patch Frequency</td>
+      <td>Once per AMC year.</td>
+      <td>Twice per AMC year.</td>
+      <td>Accept twice per AMC year for application-level patches — operationally manageable.</td>
+      <td><span class="tag tag-med">Medium</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>8.5</td>
+      <td>Firewall Recommendations</td>
+      <td>Not present.</td>
+      <td>Vendor provides firewall security policy recommendations for DMS &amp; PBX servers.</td>
+      <td>Accept — Vendor will provide written hardening recommendations once. Ongoing firewall management remains Customer IT scope (already in 8.5).</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>8.8</td>
+      <td>SSL Installation</td>
+      <td>Excluded (Customer responsibility).</td>
+      <td>Vendor provides "reasonable assistance" for SSL installation during AMC.</td>
+      <td>Accept — limit to 1 SSL installation per year per certificate at no charge; additional billed.</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>9.9</td>
+      <td>Confidentiality Survival</td>
+      <td>3 years post-termination (Section 14.6).</td>
+      <td><strong>PERPETUAL / FOREVER</strong> for data-protection &amp; operational security obligations. <em>Internally conflicts with Section 14.6 which still says 3 years.</em></td>
+      <td>Harmonise both sections to <strong>3 years post-termination</strong>, with perpetual survival only for items that constitute "trade secrets" under Kuwait law. Delete the word "thereafter" or qualify with a time limit.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>10.6</td>
+      <td>MFA Mandatory</td>
+      <td>Not present.</td>
+      <td>MFA mandatory for all privileged + remote access.</td>
+      <td>Accept — already industry standard.</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>10.12</td>
+      <td>Password Vault / PAM</td>
+      <td>Not present.</td>
+      <td>"Password vault or privileged access management solutions <strong>should be used</strong>"</td>
+      <td>Accept the "should be used" language (recommended, not mandatory). If Customer wants mandatory, change to "may" or require Customer to provide the PAM tool.</td>
+      <td><span class="tag tag-med">Medium</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>10.15</td>
+      <td>Kuwait-Only Access</td>
+      <td>Not present.</td>
+      <td>DMS &amp; PBX access restricted to <strong>users accessing from Kuwait only</strong>; any external location requires prior written approval per request.</td>
+      <td>Counter: replace with "named authorized personnel of the Vendor, regardless of geography, connecting via Vendor's approved secure VPN with MFA". Geo-restriction is impractical for a UAE FZCO entity providing remote support.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-med">
+      <td>12</td>
+      <td>Source Code Escrow</td>
+      <td>Not present.</td>
+      <td>Mentioned vaguely — "may include" / "subject to mutual agreement". No mandatory escrow.</td>
+      <td>Accept as drafted (soft-commitment is fine). Decline if Customer later demands mandatory third-party escrow — that would be priced separately.</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>15.4</td>
+      <td>No Service Suspension During Disputes</td>
+      <td>Not present.</td>
+      <td>Vendor cannot suspend service during AMC disputes, payment discussions, renewal discussions, or commercial disagreements.</td>
+      <td>Counter: Vendor will not suspend service for <strong>good-faith disputes under active negotiation</strong>. For clear breach (e.g. non-payment beyond 60 days, no active dialogue), Vendor retains right to suspend with 14 days' written notice.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>16</td>
+      <td>Backup &amp; DR Restoration</td>
+      <td>Explicitly excluded; covered under separate Synology quote.</td>
+      <td>Re-inserted. Vendor responsible for restoration of software + <strong>operating system</strong> in disaster scenarios, using backups provided by Customer.</td>
+      <td>Restore exclusion. Recovery support from <strong>existing valid backups</strong> remains within AMC (this is already in scope as troubleshooting). Full DR planning, off-site backup, RTO/RPO commitments stay in separate Synology contract.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>17.4</td>
+      <td>Late Payment Penalty</td>
+      <td>Suspension of priority support after 30 days late.</td>
+      <td>Late payment cannot affect operational activities, system access, software usage, database access, customer data, delivery operations, call centre operations, or normal business operations.</td>
+      <td>Counter: Late payment beyond 60 days entitles Vendor to suspend <strong>non-critical support</strong> after 14 days' written notice. Critical (P1) support continues. Vendor retains right to terminate AMC under Section 18.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>18.4</td>
+      <td>3-Year Price Freeze</td>
+      <td>Not present (annual renewal review).</td>
+      <td>"Pricing... shall remain fixed and unchanged for a period of <strong>three (3) years</strong>."</td>
+      <td>Counter: Accept 1-year fixed pricing. Years 2 &amp; 3 subject to annual review with cap of CPI (Kuwait inflation) or 5% per year, whichever is lower. Or accept 3-year freeze if AMC fee is increased to <strong>KD 1,500/year</strong> to absorb future cost rises.</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-high">
+      <td>19</td>
+      <td>Liability Cap</td>
+      <td>12 months AMC fees paid (~KD 1,000).</td>
+      <td>"Total direct software Development costs + AMC fee paid or payable" — significantly larger exposure (potentially KD 20,000+).</td>
+      <td>Counter: Liability cap = <strong>greater of (a) 12 months AMC fees, or (b) 50% of total Development cost</strong>, whichever is lower. Unlimited liability retained for the carve-outs they have correctly listed (fraud, gross negligence, IP infringement, intentional security breach, confidentiality breach).</td>
+      <td><span class="tag tag-high">High</span></td>
+    </tr>
+
+    <tr class="priority-low">
+      <td>13</td>
+      <td>Document Numbering Errors</td>
+      <td>Section 13 starts at item 1.</td>
+      <td>Section 13 (Reporting) items start at "4". Section 15 items 1–3 are duplicates of Section 13. Copy/paste errors.</td>
+      <td>Re-number cleanly. No commercial impact.</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-low">
+      <td>9.9 vs 14.6</td>
+      <td>Internal Conflict</td>
+      <td>Single 3-year survival clause.</td>
+      <td>9.9 says perpetual; 14.6 says 3 years. Conflict.</td>
+      <td>Harmonise — one survival period applies (recommend 3 years).</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-low">
+      <td>8.1 vs 8.2</td>
+      <td>Internal Conflict</td>
+      <td>OS = Customer scope.</td>
+      <td>8.1 says OS is Customer; 8.2 says Vendor warranties OS for 3 years. Conflict.</td>
+      <td>Resolve per recommendation in Section 8.2 above.</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+    <tr class="priority-low">
+      <td>21</td>
+      <td>Dispute Resolution</td>
+      <td>Kuwait courts.</td>
+      <td>Kuwait courts.</td>
+      <td>Optional: add arbitration clause (Kuwait Commercial Arbitration Centre) for faster, confidential resolution. Acceptable as drafted if customer prefers courts.</td>
+      <td><span class="tag tag-low">Low</span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<h2>What Centrix Plus Accepts Unchanged</h2>
+<ul>
+  <li>Section 1 — Scope of Solution Covered (Call Centre + CRM + Mobile App)</li>
+  <li>Section 4 — Service Availability (98% per calendar month with stated exclusions)</li>
+  <li>Section 6 — Vendor Responsibilities (no changes from v3)</li>
+  <li>Section 7 — Customer Responsibilities (no changes from v3, including physical &amp; cyber-security perimeter)</li>
+  <li>Section 8.6 — Cyber-attack Prevention (Customer responsibility) — <strong>important clause retained</strong></li>
+  <li>Section 9.1–9.5 — Data Protection &amp; Restrictions</li>
+  <li>Section 10.1–10.5 — Existing Credential Management clauses</li>
+  <li>Section 11 — License &amp; System Control</li>
+  <li>Section 14.1–14.5 — IP, Confidentiality &amp; Security (subject to 9.9 harmonisation)</li>
+  <li>Section 17.1–17.3, 17.5–17.7 — Payment Terms (subject to 17.4 amendment)</li>
+  <li>Section 18.1–18.3 — Term, Renewal &amp; Termination (subject to 18.4 amendment)</li>
+  <li>Section 19 — Liability carve-outs for fraud, willful misconduct, IP infringement, confidentiality (subject to cap formula amendment)</li>
+  <li>Section 20 — Force Majeure</li>
+  <li>Section 21 — Governing Law &amp; Dispute Resolution (Kuwait)</li>
+  <li>Section 22 — Change Requests</li>
+  <li>Section 23 — Entire Agreement</li>
+</ul>
+
+<h2>Commercial Impact Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 35%;">Cost Driver</th>
+      <th style="width: 22%;">Centrix Plus v3</th>
+      <th style="width: 22%;">Frontline Counter (As-Is)</th>
+      <th style="width: 21%;">Centrix Recommended</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SLA — 24×7 P1 staffing</td>
+      <td>Business hours only</td>
+      <td>Full 24×7 (significant staffing cost)</td>
+      <td>24×7 ack, business-hours dispatch</td>
+    </tr>
+    <tr>
+      <td>On-site visits</td>
+      <td>2/year</td>
+      <td>4/year</td>
+      <td>3/year</td>
+    </tr>
+    <tr>
+      <td>Hardware warranty period</td>
+      <td>Customer responsibility</td>
+      <td>3 years incl. OS patching</td>
+      <td>OEM warranty period only</td>
+    </tr>
+    <tr>
+      <td>OS patching</td>
+      <td>Excluded</td>
+      <td>Included</td>
+      <td>Excluded</td>
+    </tr>
+    <tr>
+      <td>Backup &amp; DR</td>
+      <td>Separate Synology quote</td>
+      <td>In AMC scope</td>
+      <td>Separate Synology quote (recovery from existing backups still in AMC)</td>
+    </tr>
+    <tr>
+      <td>Confidentiality survival</td>
+      <td>3 years</td>
+      <td>Perpetual</td>
+      <td>3 years (perpetual for trade secrets)</td>
+    </tr>
+    <tr>
+      <td>Liability cap</td>
+      <td>12 months AMC fees</td>
+      <td>Dev cost + AMC fee</td>
+      <td>Greater of 12 mo AMC or 50% Dev</td>
+    </tr>
+    <tr>
+      <td>Payment leverage</td>
+      <td>Suspend support after 30 days</td>
+      <td>No suspension allowed ever</td>
+      <td>Suspend non-critical after 60 days</td>
+    </tr>
+    <tr>
+      <td>Price freeze</td>
+      <td>Annual review</td>
+      <td>3-year freeze</td>
+      <td>1-year freeze + CPI cap</td>
+    </tr>
+    <tr>
+      <td>Annual AMC fee</td>
+      <td><strong>KD 1,000</strong></td>
+      <td><strong>KD 1,000</strong> (unviable at this scope)</td>
+      <td><strong>KD 1,000</strong> (viable at recommended scope)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="footnote">If Customer insists on Frontline's full counter-version as-is, Centrix Plus's required AMC fee to break even on the obligations would be approximately KD 3,500–4,500 per year. The recommended middle-ground position retains the KD 1,000 fee.</p>
+
+</body>
+</html>
